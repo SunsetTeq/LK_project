@@ -252,7 +252,8 @@ export const Grid = () => {
         p: '12px 0 0 0',
         display: 'flex',
         flexDirection: 'column',
-        width: '80%',
+        overflow: 'hidden',
+        flexGrow: '1',
       }}
     >
       <StyledDataGrid

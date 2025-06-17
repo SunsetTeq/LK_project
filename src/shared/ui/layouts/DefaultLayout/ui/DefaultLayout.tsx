@@ -4,7 +4,7 @@ import { Navigation } from '@widgets/Navigation';
 
 import styles from './styles.module.scss';
 import { Box, Divider } from '@mui/material';
-import { deviderStyle, navigatorBox } from './styles';
+import { deviderStyle } from './styles';
 
 export const DefaultLayout = () => {
   return (
@@ -12,7 +12,7 @@ export const DefaultLayout = () => {
       <div className={styles.wrapper}>
         <Sidebar />
         <div className={styles.container}>
-          <Box sx={navigatorBox}>
+          <Box>
             <Navigation />
             <Divider variant="middle" sx={deviderStyle} />
           </Box>

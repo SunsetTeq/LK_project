@@ -33,7 +33,7 @@ export const cartWrap = {
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'column',
-  width: '27%',
+  minWidth: '270px',
   gap: 1,
   p: '22px 0 0 0',
 };

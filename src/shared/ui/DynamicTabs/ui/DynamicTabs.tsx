@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Tab, Tabs } from '@mui/material';
 import { PageDevider } from '@ui/PageDevider';
-import { boxTab, dinTab, dynTabs, onlyTabs } from './styles';
+import { dinTab, dynTabs, onlyTabs } from './styles';
 
 interface TabItem {
   label: string;
@@ -26,10 +26,13 @@ export const DynamicTabs: React.FC<DynamicTabsProps> = ({
   return (
     <Box
       sx={{
-        width: '100%',
+        flexGrow: '1',
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden',
       }}
     >
-      <Box component={'div'} sx={boxTab}>
+      <Box component={'div'}>
         <Box sx={onlyTabs}>
           <Tabs
             value={value}
@@ -49,11 +52,19 @@ export const DynamicTabs: React.FC<DynamicTabsProps> = ({
         </Box>
         <PageDevider />
       </Box>
-      {tabs.map((tab, idx) => (
-        <div key={idx} role="tabpanel" hidden={value !== idx}>
-          {value === idx && <Box>{tab.content}</Box>}
-        </div>
-      ))}
+      {tabs.map(
+        (tab, idx) =>
+          value === idx && (
+            <div
+              key={idx}
+              role="tabpanel"
+              hidden={value !== idx}
+              style={{ display: 'flex', flexGrow: '1' }}
+            >
+              {tab.content}
+            </div>
+          ),
+      )}
     </Box>
   );
 };

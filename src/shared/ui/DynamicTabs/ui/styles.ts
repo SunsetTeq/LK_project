@@ -30,13 +30,6 @@ export const dinTab = {
   },
 };
 
-export const boxTab = {
-  position: 'sticky',
-  top: 56,
-  zIndex: '1100',
-  backgroundColor: 'background.paper',
-};
-
 export const onlyTabs = {
   ml: '-4px',
 };
