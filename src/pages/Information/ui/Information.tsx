@@ -10,9 +10,5 @@ const tabs = [
 ];
 
 export const Information = () => {
-  return (
-    <>
-      <DynamicTabs tabs={tabs} ariaLabel="Информация" />
-    </>
-  );
+  return <DynamicTabs tabs={tabs} ariaLabel="Информация" />;
 };

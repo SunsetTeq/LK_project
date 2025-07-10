@@ -15,7 +15,28 @@ export const selectField = {
     color: foregroundGhostColor,
   },
 };
-export const selectBox = {};
+export const leftWrapper = {
+  display: 'flex',
+  gap: 3,
+  height: '100%',
+  flexGrow: '1',
+  // overflow: 'hidden',
+};
+
+export const leftContent = {
+  mt: 1,
+  pt: 2,
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 2,
+};
+
+export const cardBox = {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '12px',
+};
+
 export const selectInputLabel = {
   ...RegularXXS,
   fontSize: '16px',
@@ -36,6 +57,7 @@ export const rightColumn = {
   mt: 1,
   pt: 2,
   display: 'flex',
+  flexGrow: '1',
   flexDirection: 'column',
   gap: 2,
 };

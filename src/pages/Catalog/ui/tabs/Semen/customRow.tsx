@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
 import { GridRow, gridClasses, type GridRowProps } from '@mui/x-data-grid';
-import { Button1, Button2 } from '../../styles';
+import { Button1, Button2 } from '@ui/Buttons/buttons';
 import { backgroundInfoColor } from '@ui/fonts/fonts';
 import type { Category } from '@pages/Catalog/constants/categories';
 import { useRowActions } from '@pages/Catalog/lib/hooks/useRowActions';

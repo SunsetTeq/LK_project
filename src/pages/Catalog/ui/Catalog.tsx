@@ -1,4 +1,3 @@
-import { Box } from '@mui/material';
 import { DynamicTabs } from '@ui/DynamicTabs';
 import { Training } from './tabs/Training';
 import { Semen } from './tabs/Semen/Semen';
@@ -15,11 +14,5 @@ const tabs = [
 ];
 
 export const Catalog = () => {
-  return (
-    <>
-      <Box component={'div'} sx={{ display: 'flex' }}>
-        <DynamicTabs tabs={tabs} ariaLabel="Каталог" />
-      </Box>
-    </>
-  );
+  return <DynamicTabs tabs={tabs} ariaLabel="Каталог" />;
 };

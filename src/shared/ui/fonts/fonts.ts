@@ -16,9 +16,11 @@ export const borderGhostColor = '#23262A1A';
 export const borderWarningSecondaryColor = '#F5AB0059';
 export const borderSuccessSecondaryColor = '#00AF4D59';
 export const borderAccentGhostColor = '#F6FAFF';
+export const borderAccentTertiaryColor = '#1D252D1A';
 export const borderAccentColor = '#2178D4';
 export const borderSecondaryColor = '#23262A33';
 export const borderAccentSecondaryColor = '#B3D2F3';
+export const borderColorSplit = '#F0F0F0';
 
 export const RegularXS = {
   fontSize: '14px',
@@ -102,4 +104,13 @@ export const OpenSansRegularXs = {
   lineHeight: '20px',
   letterSpacing: '0px',
   color: 'inherit',
+};
+
+export const HeaderH6 = {
+  fontSize: '20px',
+  fontWeight: '600',
+  fontFamily: 'Inter',
+  lineHeight: '28px',
+  color: 'inherit',
+  letterSpacing: '0px',
 };

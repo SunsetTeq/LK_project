@@ -99,6 +99,94 @@ export function getCardsData() {
 
   const assignments = user?.assignments ?? [];
 
+  type AssignmentGoods = {
+    sum: number;
+    id: string | null;
+    cols: { product: string; article: string; count: string };
+    rows: { product: string; article: number; count: number }[];
+  };
+
+  const assignmentsGoods: AssignmentGoods[] =
+    user?.assignments_goods?.map((item) => ({
+      sum: item.sum ?? 0,
+      id: item.id ?? null,
+      cols: {
+        product: 'Товар',
+        article: 'Артикул',
+        count: 'Кол-во доз',
+      },
+      rows: item.content ?? [],
+    })) ?? [];
+
+  type AssignmentExecution = {
+    id: string | null;
+    cols: {
+      product: string;
+      article: string;
+      count_fixed: string;
+      count_set: string;
+      count_required: string;
+      count_performed: string;
+    };
+    rows: {
+      product: string;
+      article: number;
+      count_fixed: number;
+      count_set: number;
+      count_required: number;
+      count_performed: number;
+    }[];
+  };
+
+  const assignmentsExecution: AssignmentExecution[] =
+    user?.assignments_execution?.map((item) => ({
+      id: item.id ?? null,
+      cols: {
+        product: 'Товар',
+        article: 'Артикул',
+        count_fixed: 'Закреплено, доз',
+        count_set: 'Поставлено, доз',
+        count_required: 'Требуется, доз',
+        count_performed: 'Выполнено',
+      },
+      rows: item.content ?? [],
+    })) ?? [];
+
+  type AssignmentDelivery = {
+    id: string | null;
+    assignments_id: string | null;
+    status: string;
+    label: string;
+    content: {
+      date: string;
+      price: string;
+      shipped: string;
+      left: string;
+    };
+  };
+
+  const assignmentsDelivery: AssignmentDelivery[] =
+    user?.assignments_delivery?.map((item) => ({
+      id: item.id ?? null,
+      assignments_id: item.assignments_id ?? null,
+      status: item.status,
+      label: item.label,
+      content: {
+        date: item.content?.date ?? 'Неизвестная дата',
+        price: item.content?.price
+          ? `${item.content?.price.toLocaleString('ru-RU')} руб.`
+          : '0 руб',
+        shipped: item.content?.shipped
+          ? `${item.content?.shipped.toLocaleString('ru-RU')} доз`
+          : '0 доз',
+        left: item.content?.left
+          ? `${item.content?.left.toLocaleString('ru-RU')} доз`
+          : '0 доз',
+      },
+    })) ?? [];
+
+  const assignmentsBulls = user?.assignments_bulls ?? [];
+
   return {
     companyName: user?.active_company_name ?? 'Нет информации',
     debtMessage: debt_message,
@@ -109,5 +197,9 @@ export function getCardsData() {
     managers,
     details,
     assignments,
+    assignmentsGoods,
+    assignmentsExecution,
+    assignmentsDelivery,
+    assignmentsBulls,
   };
 }

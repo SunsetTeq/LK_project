@@ -15,7 +15,7 @@ export const dynTabs = {
   },
 
   '& .MuiTabs-indicatorSpan': {
-    width: '90%',
+    width: '95%',
     backgroundColor: foregroundAccentColor,
   },
 };
@@ -23,20 +23,14 @@ export const dynTabs = {
 export const dinTab = {
   ...RegularXS,
   color: foregroundPrimaryColor,
-  p: '6px 0 0 0',
+  p: '6px 4px 0 4px',
+  minWidth: '0px',
   textTransform: 'none',
   '&.Mui-selected': {
     color: foregroundAccentColor,
   },
 };
 
-export const boxTab = {
-  position: 'sticky',
-  top: 56,
-  zIndex: '1100',
-  backgroundColor: 'background.paper',
-};
-
 export const onlyTabs = {
-  ml: '-4px',
+  ml: '0px',
 };

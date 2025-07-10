@@ -88,6 +88,7 @@ interface IUser {
   assignments?: {
     title: string;
     header: number;
+    id: string;
     assignment_status: string;
     content?: {
       regular: string;
@@ -104,6 +105,52 @@ interface IUser {
       shipped_doses: string;
       left_doses: string;
       dealings: string;
+    };
+  }[];
+
+  assignments_bulls?: {
+    id: string;
+    bulls: {
+      bull_id: string;
+      title: string;
+      count: number;
+    }[];
+  }[];
+
+  assignments_goods?: {
+    id: string;
+    sum: number;
+
+    content?: {
+      product: string;
+      article: number;
+      count: number;
+    }[];
+  }[];
+  assignments_execution?: {
+    id: string;
+
+    content?: {
+      product: string;
+      article: number;
+      count_fixed: number;
+      count_set: number;
+      count_required: number;
+      count_performed: number;
+    }[];
+  }[];
+
+  assignments_delivery?: {
+    id: string;
+    assignments_id: string;
+    status: string;
+    label: string;
+
+    content?: {
+      date: string;
+      price: number;
+      shipped: number;
+      left: number;
     };
   }[];
 }

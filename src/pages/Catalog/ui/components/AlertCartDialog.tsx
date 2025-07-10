@@ -4,7 +4,7 @@ import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
-import { Button1, Button2 } from '../styles';
+import { Button1, Button2 } from '@ui/Buttons/buttons';
 import { foregroundAccentColor } from '@ui/fonts/fonts';
 
 export default function AlertCartDialog() {
@@ -29,7 +29,7 @@ export default function AlertCartDialog() {
         slotProps={{
           paper: {
             component: 'form',
-            sx: { borderRadius: '16px', minWidth: '500px', minHeight: '281px' },
+            sx: { borderRadius: '16px', maxWidth: '500px', minHeight: '281px' },
             onSubmit: (event: React.FormEvent<HTMLFormElement>) => {
               event.preventDefault();
               const formData = new FormData(event.currentTarget);

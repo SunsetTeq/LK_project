@@ -1,39 +1,17 @@
-import { Button } from '@mui/material';
-import { styled } from '@mui/material/styles';
 import {
   borderSecondaryColor,
-  foregroundAccentColor,
   foregroundPrimaryColor,
   foregroundTertiaryColor,
-  MediumXS,
   OpenSansRegularXs,
   RegularXS,
   RegularXXS,
 } from '@ui/fonts/fonts';
 
-export const Button1 = styled(Button)({
-  ...MediumXS,
-  textTransform: 'none',
-  boxShadow: 'none',
-  borderRadius: '8px',
-  backgroundColor: foregroundAccentColor,
-  color: 'white',
-});
-
-export const Button2 = styled(Button)({
-  ...MediumXS,
-  textTransform: 'none',
-  boxShadow: 'none',
-  borderRadius: '8px',
-  backgroundColor: 'white',
-  color: foregroundPrimaryColor,
-});
-
 export const cartWrap = {
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'column',
-  width: '27%',
+  minWidth: '270px',
   gap: 1,
   p: '22px 0 0 0',
 };

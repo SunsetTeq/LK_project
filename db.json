@@ -105,6 +105,7 @@
       {
         "title": "50 -ЛЕТИЯ СССР ПЛЕМЗАВОД -КОЛХОЗ: мар.25 — июл.26 по Количеству",
         "header": 32,
+        "id": 1,
         "assignment_status": "Исполняется",
         "content": {
           "regular": "Каждые 3 месяца",
@@ -126,6 +127,7 @@
       {
         "title": "50 -ЛЕТИЯ СССР ПЛЕМЗАВОД -КОЛХОЗ: мар.25 — июл.26 по Количеству",
         "assignment_status": "На согласовании",
+        "id": 2,
         "content": {
           "regular": "Каждые 3 месяца",
           "period": "01.03.2025 – 31.07.2026",
@@ -146,6 +148,7 @@
       {
         "title": "50 -ЛЕТИЯ СССР ПЛЕМЗАВОД -КОЛХОЗ: мар.25 — июл.26 по Количеству",
         "assignment_status": "Исполняется",
+        "id": 3,
         "content": {
           "regular": "Каждые 3 месяца",
           "period": "01.03.2025 – 31.07.2026",
@@ -167,6 +170,7 @@
         "title": "50 -ЛЕТИЯ СССР ПЛЕМЗАВОД -КОЛХОЗ: мар.25 — июл.26 по Количеству",
         "header": 32,
         "assignment_status": "Исполняется",
+        "id": 4,
         "content": {
           "regular": "Каждые 3 месяца",
           "period": "01.03.2025 – 31.07.2026",
@@ -187,6 +191,7 @@
       {
         "title": "50 -ЛЕТИЯ СССР ПЛЕМЗАВОД -КОЛХОЗ: мар.25 — июл.26 по Количеству",
         "header": 32,
+        "id": 5,
         "assignment_status": "Исполняется",
         "content": {
           "regular": "Каждые 3 месяца",
@@ -203,6 +208,144 @@
           "shipped_doses": "Отгружено доз, шт",
           "left_doses": "Осталось доз, шт",
           "dealings": "Сделок с отгрузками, шт"
+        }
+      }
+    ],
+
+    "assignments_bulls": [
+      {
+        "id": "1",
+        "bulls": [
+          {
+            "bull_id": "1",
+            "title": "Supernatural",
+            "count": 255
+          },
+          {
+            "bull_id": "2",
+            "title": "Meganatural",
+            "count": 111
+          }
+        ]
+      }
+    ],
+
+    "assignments_goods": [
+      {
+        "id": "1",
+        "sum": 1200,
+        "content": [
+          {
+            "product": "SUPERNATURAL",
+            "article": 115345642345,
+            "count": 600
+          },
+          {
+            "product": "SUPERNATURAL",
+            "article": 115345642345,
+            "count": 600
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "sum": 2200,
+        "content": [
+          {
+            "product": "SUPERNATURAL",
+            "article": 115345642345,
+            "count": 1100
+          },
+          {
+            "product": "SUPERNATURAL",
+            "article": 115345642345,
+            "count": 1100
+          }
+        ]
+      }
+    ],
+    "assignments_execution": [
+      {
+        "id": "1",
+        "content": [
+          {
+            "product": "SUPERNATURAL",
+            "article": 115345642345,
+            "count_fixed": 500,
+            "count_set": 200,
+            "count_required": 300,
+            "count_performed": 40
+          },
+          {
+            "product": "SUPERNATURAL",
+            "article": 115345642345,
+            "count_fixed": 500,
+            "count_set": 200,
+            "count_required": 300,
+            "count_performed": 40
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "sum": 2200,
+        "content": [
+          {
+            "product": "SUPERNATURAL",
+            "article": 115345642345,
+            "count_fixed": 1000,
+            "count_set": 400,
+            "count_required": 600,
+            "count_performed": 80
+          },
+          {
+            "product": "SUPERNATURAL",
+            "article": 115345642345,
+            "count_fixed": 1000,
+            "count_set": 400,
+            "count_required": 600,
+            "count_performed": 80
+          }
+        ]
+      }
+    ],
+    "assignments_delivery": [
+      {
+        "id": "1",
+        "assignments_id": "1",
+        "status": "payment_is_expected",
+        "label": "30567– Семя Альта. ООО «Красная Звезда» (21.04.2025)",
+        "content": {
+          "date": "23.04.2025",
+          "price": 345443,
+          "shipped": 3654,
+          "left": 233
+        }
+      },
+      {
+        "id": "2",
+        "assignments_id": "1",
+
+        "status": "end",
+        "label": "30567– Семя Альта. ООО «Красная Звезда» (21.04.2025)",
+        "content": {
+          "date": "23.04.2025",
+          "price": 345443,
+          "shipped": 3654,
+          "left": 233
+        }
+      },
+      {
+        "id": "3",
+        "assignments_id": "1",
+
+        "status": "end",
+        "label": "30567– Семя Альта. ООО «Красная Звезда» (21.04.2025)",
+        "content": {
+          "date": "23.04.2025",
+          "price": 345443,
+          "shipped": 3654,
+          "left": 233
         }
       }
     ]

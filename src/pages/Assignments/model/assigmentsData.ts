@@ -14,3 +14,34 @@ export const DEFAULT_ASSIGNMENTS_LABELS = {
   left_doses: 'Осталось доз, шт',
   dealings: 'Сделок с отгрузками, шт',
 };
+
+export interface CardAssignmentsProps {
+  title: string;
+  headerValue: string;
+  assignmentStatus: string;
+  content: {
+    regular: string;
+    period: string;
+    total_doses: number;
+    shipped_doses: number;
+    left_doses: number;
+    dealings: number;
+  };
+  contentLabels: {
+    regular: string;
+    period: string;
+    total_doses: string;
+    shipped_doses: string;
+    left_doses: string;
+    dealings: string;
+  };
+}
+
+export const KEYS = [
+  'regular',
+  'period',
+  'total_doses',
+  'shipped_doses',
+  'left_doses',
+  'dealings',
+] as const;

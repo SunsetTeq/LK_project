@@ -1,6 +1,5 @@
 import { Box, Divider, IconButton, Typography } from '@mui/material';
 import {
-  Button1,
   cartBoxEmpty,
   cartBoxNoEmpty,
   cartBoxNoEmptyContent,
@@ -11,6 +10,7 @@ import {
   listofPurchases,
   stringPurschases,
 } from '../styles';
+import { Button1 } from '@ui/Buttons/buttons';
 import RemoveIcon from '../img/remove.svg?react';
 import { foregroundTertiaryColor, RegularXS } from '@ui/fonts/fonts';
 import Icon from '../img/ic_shop_card.svg?react';
